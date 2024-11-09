@@ -93,7 +93,7 @@ export function useGetSelectedText() {
 
 export function AskAgentQuestionForm({ agent, initialQuestion }: { agent: AgentType; initialQuestion?: string }) {
   const { push } = useNavigation();
-  const { handleSubmit, itemProps, setValue } = useForm<AskAgentQuestionFormValues>({
+  const { handleSubmit, itemProps } = useForm<AskAgentQuestionFormValues>({
     initialValues: { question: initialQuestion ? initialQuestion.trim() + "\n\n" : "" },
     onSubmit(values) {
       push(
@@ -109,12 +109,6 @@ export function AskAgentQuestionForm({ agent, initialQuestion }: { agent: AgentT
     },
   });
 
-  useEffect(() => {
-    if (!initialQuestion) {
-      return;
-    }
-    setValue("question", initialQuestion);
-  }, [initialQuestion]);
   return (
     <Form
       actions={
