@@ -19,13 +19,11 @@ import {
   openExtensionPreferences,
   closeMainWindow,
   PopToRootType,
-  LocalStorage,
 } from "@raycast/api";
 import { withAccessToken, OAuthService, usePromise } from "@raycast/utils";
 import { DustAPI } from "@dust-tt/client";
 import { useEffect } from "react";
 import { getUser, getWorkspaceId, setUser } from "../utils";
-import PickWorkspaceCommand from "../pickWorkspace";
 
 const client = new OAuth.PKCEClient({
   redirectMethod: OAuth.RedirectMethod.App,
@@ -45,7 +43,7 @@ const provider = new OAuthService({
   scope: "openid offline_access",
   authorizeUrl: `${preferences.oauthDomain}/authorize`,
   tokenUrl: `${preferences.oauthDomain}/oauth/token`,
-  personalAccessToken: getPreferenceValues().apiKey,
+  personalAccessToken: preferences.connexionFlow === "apiKey" ? getPreferenceValues().apiKey : undefined,
   onAuthorize(params) {
     dustApi = new DustAPI(
       {
