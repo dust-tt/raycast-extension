@@ -18,15 +18,15 @@ Raycast will automatically show a popup to sign in with Dust.
 
 _Using workspace API key will be removed in the future._
 
-#### API key
+#### API key (optional)
 
 You can create an API key for Dust by going to your Admin preferences, on the **Developers Tools** panel
 
-#### Email
+#### Email (optional)
 
 The email address you use to log in your Dust workspace. It enriches metrics in the usage reports.
 
-#### Workspace ID
+#### Workspace ID (optional)
 
 The ID can be found in any of the workspace's pages. It's a string of 10 chars that comes immediately after `https://dust.tt/w/` when you're logged in your Dust workspace through the web browser.
 
