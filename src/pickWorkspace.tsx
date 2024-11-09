@@ -93,6 +93,11 @@ export default withDustClient(function PickWorkspaceCommand() {
       </List>
     );
   } else {
-    return <Detail navigationTitle="Not using OAuth" markdown="Please connect to Dust using OAuth..." />;
+    return (
+      <Detail
+        navigationTitle="Not using OAuth"
+        markdown="Workspace selection is **only available when connecting with your own Dust account** and not **workspace API Key**. _You can change the connexion method in the extension preferences._"
+      />
+    );
   }
 });

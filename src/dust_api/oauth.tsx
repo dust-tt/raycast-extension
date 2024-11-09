@@ -110,7 +110,7 @@ export const withPickedWorkspace = <T,>(Component: React.ComponentType<T>) => {
       };
       return withDustClient(OauthCheckComponent);
     } else {
-      const LegacyCheckComponent: React.ComponentType<T> = () => {
+      const LegacyCheckComponent: React.ComponentType<T> = (props) => {
         const dustAPI = getDustClient();
 
         useEffect(() => {
