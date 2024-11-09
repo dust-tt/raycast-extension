@@ -42,6 +42,8 @@ Directly ask something to the Dust or GPT-4 agent.
 
 If you ask a question with the parameter, you will get a form to add one, auto-filled with the currently selected text.
 
+<<<<<<< HEAD
+
 ## Commands
 
 ### Ask Dust / GPT-4
@@ -49,6 +51,10 @@ If you ask a question with the parameter, you will get a form to add one, auto-f
 Directly ask something to the Dust or GPT-4 agent.
 
 If you ask a question with the parameter, you will get a form to add one, auto-filled with the currently selected text.
+
+=======
+
+> > > > > > > contributions/merge-1731139219429725000
 
 ### Ask agent
 
@@ -71,6 +77,11 @@ Access command history
 ## API code
 
 Code extracted from:
+<<<<<<< HEAD
 
 - Dust slack connector: https://github.com/dust-tt/dust/tree/main/connectors/src/connectors/slack
-- Dust types: https://github.com/dust-tt/dust/tree/main/types
+- # Dust types: https://github.com/dust-tt/dust/tree/main/types
+
+* Dust slack connector: https://github.com/dust-tt/dust/tree/main/connectors/src/connectors/slack
+* Dust types: https://github.com/dust-tt/dust/tree/main/types
+  > > > > > > > contributions/merge-1731139219429725000
