@@ -1,5 +1,14 @@
 # Dust.tt Changelog
 
+## [Feature] - 2024-10-01
+
+- allow user to specify custom API URL
+
+## [Feature] - 2024-09-24
+
+- ask user to provide email address during the setup
+- specify email address and username in API calls to provide accurate usage statistics
+
 ## [chore] - 2024-09-23
 
 - transfer extension ownership to the Dust team
