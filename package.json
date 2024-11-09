@@ -1,18 +1,58 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "dust-tt",
-  "title": "Dust.tt",
-  "description": "Query dust.tt",
+  "title": "Ask Dust",
+  "description": "Query dust.tt AI agents",
   "icon": "dust.png",
-  "author": "vineus",
+  "author": "albandum",
+  "contributors": [
+    "vineus",
+    "henry_fontanier",
+    "stang"
+  ],
   "categories": [
     "Productivity"
   ],
   "license": "MIT",
+  "preferences": [
+    {
+      "name": "apiBaseUrl",
+      "description": "The base URL of the Dust API",
+      "type": "textfield",
+      "required": false,
+      "title": "API URL",
+      "default": "https://dust.tt/api/v1/w",
+      "placeholder": "https://dust.tt/api/v1/w"
+    },
+    {
+      "name": "apiKey",
+      "description": "Your Dust API key",
+      "type": "password",
+      "required": true,
+      "title": "API key",
+      "placeholder": "sk-xxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "name": "userEmail",
+      "description": "The email address of your Dust user account",
+      "type": "textfield",
+      "required": true,
+      "title": "Email",
+      "placeholder": "john.doe@example.com"
+    },
+    {
+      "name": "workspaceId",
+      "description": "Your Dust workspace ID",
+      "type": "textfield",
+      "required": true,
+      "title": "Workspace ID",
+      "placeholder": "xxxxxxxx"
+    }
+  ],
   "commands": [
     {
-      "name": "index",
-      "title": "Dust.tt",
+      "name": "ask",
+      "title": "Ask Dust",
       "description": "Query dust.tt",
       "mode": "view",
       "arguments": [
@@ -20,15 +60,42 @@
           "name": "search",
           "placeholder": "Ask a question",
           "type": "text",
-          "required": true
+          "required": false
         }
       ]
+    },
+    {
+      "name": "askGpt",
+      "title": "Ask GPT-4",
+      "description": "Query gpt-4 on Dust.tt",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "search",
+          "placeholder": "Ask a question",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "history",
+      "title": "Questions History",
+      "description": "Show the questions and answers of the last 30 days",
+      "mode": "view"
+    },
+    {
+      "name": "askAgent",
+      "title": "Ask a Dust Agent",
+      "description": "Select an agent to ask a question",
+      "mode": "view"
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.62.2",
+    "@raycast/api": "^1.70.3",
+    "@raycast/utils": "^1.10.1",
+    "date-fns": "^3.0.0-alpha.2",
     "eventsource-parser": "^1.1.1",
-    "got": "^13.0.0",
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
