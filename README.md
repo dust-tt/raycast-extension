@@ -6,59 +6,49 @@ Query the [dust.tt](https://dust.tt/) service extention for [Raycast](https://ww
 
 You need a dust.tt account to use this extension.
 
-### Connexion
+## Connexion
 
 You will be able to sign-in with your Dust account (oauth) or using a workspace API key. Note that using workspace API key will be removed in the future.
 
-### API Base URL (optional)
+### Using workspace API KEY and ID
 
-(optional) You can specify a custom API base URL if you have specific needs. Otherwise, it defaults to `https://dust.tt/`. (advanced usage, mostly for developping the extension).
-
-### OAuth client ID (optional)
-
-(optional) You can specify a custom Oauth client ID (advanced usage, mostly for developping the extension).
-
-### OAuth Domain (optional)
-
-(optional) You can specify a Oauth domain (advanced usage, mostly for developping the extension).
-
-### API key (legacy, will be removed)
+#### API key (legacy, will be removed)
 
 You can create an API key for Dust by going to your Admin preferences, on the **Developers Tools** panel
 
-### Email (legacy, will be removed)
+#### Email (legacy, will be removed)
 
 The email address you use to log in your Dust workspace. It enriches metrics in the usage reports.
 
-### Workspace ID (legacy, will be removed)
+#### Workspace ID (legacy, will be removed)
 
 The ID can be found in any of the workspace's pages. It's a string of 10 chars that comes immediately after `https://dust.tt/w/` when you're logged in your Dust workspace through the web browser.
 
+### Avanced
+
+#### API Base URL (optional)
+
+(optional) You can specify a custom API base URL if you have specific needs. Otherwise, it defaults to `https://dust.tt/`. (advanced usage, mostly for developping the extension).
+
+#### OAuth client ID (optional)
+
+(optional) You can specify a custom Oauth client ID (advanced usage, mostly for developping the extension).
+
+#### OAuth Domain (optional)
+
+(optional) You can specify a Oauth domain (advanced usage, mostly for developping the extension).
+
 ## Commands
 
-### Ask Dust / GPT-4
+### Ask Dust / GPT-4 / Claude-3
 
-Directly ask something to the Dust or GPT-4 agent.
+Directly ask something to the Dust, GPT-4 or Claude-3 assistants.
 
 If you ask a question with the parameter, you will get a form to add one, auto-filled with the currently selected text.
 
-<<<<<<< HEAD
+### Ask ...
 
-## Commands
-
-### Ask Dust / GPT-4
-
-Directly ask something to the Dust or GPT-4 agent.
-
-If you ask a question with the parameter, you will get a form to add one, auto-filled with the currently selected text.
-
-=======
-
-> > > > > > > contributions/merge-1731139219429725000
-
-### Ask agent
-
-Select a specific dust agent to query
+Select a specific dust assistant to query
 
 ![dust-tt-1](https://github.com/alan-eu/rayast-dust/assets/467126/2c7b0b36-850b-4dde-a875-be81be78a2a2)
 
@@ -73,15 +63,3 @@ Select a specific dust agent to query
 Access command history
 
 ![dust-tt-6](https://github.com/alan-eu/rayast-dust/assets/467126/731d181d-7c97-4aed-a81c-8e9163a1038e)
-
-## API code
-
-Code extracted from:
-<<<<<<< HEAD
-
-- Dust slack connector: https://github.com/dust-tt/dust/tree/main/connectors/src/connectors/slack
-- # Dust types: https://github.com/dust-tt/dust/tree/main/types
-
-* Dust slack connector: https://github.com/dust-tt/dust/tree/main/connectors/src/connectors/slack
-* Dust types: https://github.com/dust-tt/dust/tree/main/types
-  > > > > > > > contributions/merge-1731139219429725000

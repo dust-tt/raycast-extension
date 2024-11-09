@@ -341,7 +341,7 @@ export const AskDustQuestion = withPickedWorkspace(
       <Detail
         markdown={
           dustAnswer ||
-          `Dust agent \`${agent.name}\` is thinking about your question:\n\n${question
+          `\`@${agent.name}\` is thinking about your question:\n\n${question
             .split("\n")
             .map((line) => `> ${line}`)
             .join("\n")}`
