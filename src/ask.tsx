@@ -11,14 +11,13 @@ export default withPickedWorkspace(function AskDustCommand(
   const agent = props.arguments.agent || DUST_AGENT;
   const { selectedText, isLoading } = useGetSelectedText();
 
-  if (isLoading) {
-    return <Detail isLoading={true} />;
+  if (question) {
+    return <AskDustQuestion question={question} agent={agent} />;
+  } else {
+    if (isLoading) {
+      return <Detail isLoading={true} />;
+    } else {
+      return <AskAgentQuestionForm initialQuestion={selectedText} agent={agent} />;
+    }
   }
-
-  const initialQuestion = question ? undefined : selectedText;
-  return question ? (
-    <AskDustQuestion question={question} agent={agent} />
-  ) : (
-    <AskAgentQuestionForm initialQuestion={initialQuestion} agent={agent} />
-  );
 });
